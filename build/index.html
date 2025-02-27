@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Frontend Mentor | Manage landing page</title>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-verydarkblue: #242d52;
+        --color-verybrightred: #f25f3a;
+        --color-palered: #ffefeb;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen">
+    <header class="text-white sticky top-5 z-10">
+      <section class="max-w-5xl mx-auto p-4 flex justify-between items-center">
+        <img src="./images/logo.svg" alt="" />
+        <div>
+          <button id="menu-btn" class="focus:outline-none md:hidden">
+            <img
+              id="hamburger"
+              class="cursor-pointer relative w-8"
+              src="./images/icon-hamburger.svg"
+              alt="Menu"
+            />
+            <img
+              id="close"
+              class="hidden cursor-pointer relative w-5.5"
+              src="./images/icon-close.svg"
+              alt="Menu"
+            />
+          </button>
+          <nav
+            class="hidden md:block space-x-8 text-sm text-verydarkblue"
+            aria-label="main"
+          >
+            <a href="#pricing">Pricing</a>
+            <a href="#product">Product</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#careers">Careers</a>
+            <a href="#community">Community</a>
+          </nav>
+        </div>
+        <button
+          class="bg-verybrightred hidden md:block px-3 py-1.5 w-32 rounded-3xl border border-solid border-verybrightred"
+        >
+          Get started
+        </button>
+      </section>
+
+      <section
+        id="mobile-menu"
+        class="hidden absolute top-25 left-10 right-10 p-5 shadow-lg space-y-8 bg-white flex flex-col items-center text-verydarkblue text-l font-bold"
+      >
+        <a href="#pricing">Pricing</a>
+        <a href="#producr">Product</a>
+        <a href="#aboutus">About Us</a>
+        <a href="#careers">Careers</a>
+        <a href="#community">Community</a>
+      </section>
+    </header>
+
+    <!-- Pricing
+  Product
+  About Us
+  Careers
+  Community
+
+  Get Started
+
+  Bring everyone together to build better products.
+
+  Manage makes it simple for software teams to plan day-to-day 
+  tasks while keeping the larger team goals in view.
+
+  Get Started
+
+  What’s different about Manage?
+
+  Manage provides all the functionality your team needs, without 
+  the complexity. Our software is tailor-made for modern digital 
+  product teams. 
+
+  01
+  Track company-wide progress
+  See how your day-to-day tasks fit into the wider vision. Go from 
+  tracking progress at the milestone level all the way done to the 
+  smallest of details. Never lose sight of the bigger picture again.
+
+  02
+  Advanced built-in reports
+  Set internal delivery estimates and track progress toward company 
+  goals. Our customisable dashboard helps you build out the reports 
+  you need to keep key stakeholders informed.
+
+  03
+  Everything you need in one place
+  Stop jumping from one service to another to communicate, store files, 
+  track tasks and share documents. Manage offers an all-in-one team 
+  productivity solution.
+
+  What they’ve said
+
+  Anisha Li
+  “Manage has supercharged our team’s workflow. The ability to maintain 
+  visibility on larger milestones at all times keeps everyone motivated.”
+
+  Ali Bravo
+  “We have been able to cancel so many other subscriptions since using 
+  Manage. There is no more cross-channel confusion and everyone is much 
+  more focused.”
+
+  Richard Watts
+  “Manage allows us to provide structure and process. It keeps us organized 
+  and focused. I can’t stop recommending them to everyone I talk to!”
+
+  Shanai Gough
+  “Their software allows us to track, manage and collaborate on our projects 
+  from anywhere. It keeps the whole team in-sync without being intrusive.”
+
+  Get Started
+
+  Simplify how your team works today.
+  Get Started
+
+  Home
+  Pricing
+  Products
+  About Us
+  Careers
+  Community
+  Privacy Policy
+
+  Updates in your inbox…
+  Go
+
+  Copyright 2020. All Rights Reserved -->
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const hamburger = document.getElementById("hamburger");
+      const close = document.getElementById("close");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden"); // Show/hide menu
+        hamburger.classList.toggle("hidden"); // Show/hide hamburger icon
+        close.classList.toggle("hidden"); // Show/hide close icon
+      });
+    </script>
+  </body>
+</html>
